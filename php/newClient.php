@@ -10,6 +10,7 @@ $link = mysqli_connect(
         printf("Невозможно подключиться к базе данных. Код ошибки: %s\n", mysqli_connect_error());
         exit;
     }
+if (isset($_POST)) {
 $flag = 0;
     if ($result = mysqli_query($link, 'SELECT * FROM Clients')) {
         while( $row = mysqli_fetch_assoc($result) ){
@@ -35,6 +36,7 @@ $flag = 0;
         }
         mysqli_free_result($result);
     }*/
+}
     mysqli_close($link);
-    echo '<br><a href="index.html">Вернуться на главную</a>'
+    echo '<br><a href="../index.html">Вернуться на главную</a>'
     ?>

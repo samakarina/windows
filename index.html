@@ -174,15 +174,17 @@
         <!--Скрытое модальное окно-->
         <div id="modalWindow">
             <p class="modal__title">Введите данные</p>
-            <form method="post" action="newClient.php"><!--Форма для ввода данных-->
+            <form method="post" action="php/newClient.php" id="formNewModal"><!--Форма для ввода данных-->
                 <input type="text" name="nameClient" placeholder="Имя" required><br><br>
-                <input type="tel" name="phoneClient" id="phone" placeholder="+7(987)654-32-10" required><br><br>
+                <input type="tel" name="phoneClient" id="phone" placeholder="+7(987)654-32-10" onblur="checkClient(this.value)" required><br><span id="checkClientResult"></span><br><br>
                 <input type="text" name="comment"><br><br>
-                <input type="submit" value="Оставить обращение"><button onclick="closeModal()">Отмена</button><br><br>
+                <input type="submit" id="submitBtn" value="Оставить обращение" disabled>
             </form>
+            <button onclick="closeModal()">Отмена</button><br><br>
+
         </div>
-    <div class="overlay" id="js-overlay-modal" onclick="closeModal()"></div><!--Затемнение-->
-    <!--Конец модального окна-->
+        <div class="overlay" id="js-overlay-modal" onclick="closeModal()"></div><!--Затемнение-->
+        <!--Конец модального окна-->
 
         <!--Скрипты-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--Подключение jQuery-->
@@ -195,6 +197,7 @@
         </script>
 
         <script src="js/modal.js"></script>
+        <script src="js/checkClient.js"></script>
     </body>
     <footer>
     </footer>
