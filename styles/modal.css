@@ -34,7 +34,7 @@
    transition: 0.3s all;
 }
 
-#checkClient {
+#checkClient { /*Стиль информирующей надписи*/
        opacity: 0;
        visibility: hidden;
 }

@@ -1,3 +1,8 @@
+<html>
+<head>
+
+</head>
+<body>
 <?php
 
 $link = mysqli_connect(
@@ -11,33 +16,18 @@ $link = mysqli_connect(
         exit;
     }
 if (isset($_POST)) {
-$flag = 0;
-    if ($result = mysqli_query($link, 'SELECT * FROM Clients')) {
-        while( $row = mysqli_fetch_assoc($result) ){
-            if ($_POST['phoneClient'] == $row['phone']) {
-                header('Location: http://windows/index.html ');die();
-            }
-        }
-        mysqli_free_result($result);
-    }
-
     $today = date("Y-m-d H:i:s");
     $newClient = $_POST;
     $sql = "INSERT INTO clients (nameClient, phone, comment, dateOrder) VALUES ('".$newClient["nameClient"]."','".$newClient["phoneClient"]."','".$newClient["comment"]."','".$today."')";
     if (mysqli_query($link, $sql)) {
-        echo "Ваше обращение зарегистрировано";
+        echo '<h1>Ваше обращение зарегистрировано</h1><p>Через <span id="timer">6</span> секунд Вы будете перенаправлены на стартовую страницу. Если этого не происходит, то перейдите самостоятельно: <a href="../index.html">Вернуться на главную</a>
+        </p>';
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($link);
     }
-/*
-    if ($result = mysqli_query($link, 'SELECT * FROM Clients')) {
-        print("Клиенты:\n");
-        while( $row = mysqli_fetch_assoc($result) ){
-            printf("%s (%s)\n", $row['nameClient'], $row['phone']);
-        }
-        mysqli_free_result($result);
-    }*/
 }
     mysqli_close($link);
-    echo '<br><a href="../index.html">Вернуться на главную</a>'
     ?>
+<script src=../js/redirect.js></script><!--Скрипт автоматического перенаправления на основную страницу-->
+</body>
+</html>
