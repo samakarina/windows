@@ -21,8 +21,9 @@ $flag = 0;
         mysqli_free_result($result);
     }
 
+    $today = date("Y-m-d H:i:s");
     $newClient = $_POST;
-    $sql = "INSERT INTO clients (nameClient, phone, comment) VALUES ('".$newClient["nameClient"]."','".$newClient["phoneClient"]."','".$newClient["comment"]."')";
+    $sql = "INSERT INTO clients (nameClient, phone, comment, dateOrder) VALUES ('".$newClient["nameClient"]."','".$newClient["phoneClient"]."','".$newClient["comment"]."','".$today."')";
     if (mysqli_query($link, $sql)) {
         echo "Ваше обращение зарегистрировано";
     } else {
