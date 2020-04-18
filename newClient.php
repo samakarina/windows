@@ -10,23 +10,31 @@ $link = mysqli_connect(
         printf("Невозможно подключиться к базе данных. Код ошибки: %s\n", mysqli_connect_error());
         exit;
     }
+$flag = 0;
+    if ($result = mysqli_query($link, 'SELECT * FROM Clients')) {
+        while( $row = mysqli_fetch_assoc($result) ){
+            if ($_POST['phoneClient'] == $row['phone']) {
+                header('Location: http://windows/index.html ');die();
+            }
+        }
+        mysqli_free_result($result);
+    }
 
     $newClient = $_POST;
-    var_dump($newClient);
     $sql = "INSERT INTO clients (nameClient, phone, comment) VALUES ('".$newClient["nameClient"]."','".$newClient["phoneClient"]."','".$newClient["comment"]."')";
-    var_dump($sql);
     if (mysqli_query($link, $sql)) {
-        echo "New record created successfully";
+        echo "Ваше обращение зарегистрировано";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($link);
     }
-
+/*
     if ($result = mysqli_query($link, 'SELECT * FROM Clients')) {
         print("Клиенты:\n");
         while( $row = mysqli_fetch_assoc($result) ){
             printf("%s (%s)\n", $row['nameClient'], $row['phone']);
         }
         mysqli_free_result($result);
-    }
+    }*/
     mysqli_close($link);
+    echo '<br><a href="index.html">Вернуться на главную</a>'
     ?>
