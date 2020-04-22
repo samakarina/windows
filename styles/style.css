@@ -3,8 +3,13 @@
     position: fixed;
     width: 10%;
     left: 30px;
-        z-index: 1;
-
+    z-index: 1;
+}
+#mainpic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
 }
 #navpic {
     position: fixed;
@@ -23,7 +28,7 @@
     margin: 0 auto;
 }
 #menu nav:before {
-    
+
     content: '';
     display: block;
     height: 50 px;
@@ -39,12 +44,11 @@
 
 }
 #menu ul li{
-    
     list-style: none;
     display: inline;
-} 
+}
 #menu ul li a{
-    
+
     text-decoration: none;
     color: #3A558E;
     padding: 20px;
@@ -52,10 +56,30 @@
 #menu ul li a:hover{
     color: #88909B
 }
+/*Стили перечисления преимуществ*/
 .icons{
-    width: 10%;
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-#iconid li{
-    list-style: none;
-    display: inline;
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 20px;
+}
+.column {
+  display: flex;
+  width: 20%;
+  padding: 5px;
+}
+.card-content {
+  padding: 0 20px;
+  text-align: center;
+}
+.card p {
+  margin: 20px 0 30px;
 }
