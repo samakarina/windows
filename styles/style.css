@@ -80,7 +80,7 @@
   padding: 0 20px;
   text-align: center;
 }
-.card p {
+.column .card p {
   margin: 20px 0 30px;
 }
 
@@ -105,4 +105,17 @@
 .columnWork .card-content, .columnWork .card {
     padding: 0;
     margin: 0 auto;
+}
+
+/*Стили таблицы цены*/
+
+table {
+    border-collapse: collapse;
+    border: 1px black solid;
+    margin: auto;
+    width: 35%;
+}
+
+table tr td {
+    text-align: center;
 }
