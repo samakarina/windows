@@ -1,58 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <title>Оконный сервис 46</title>
-        <link rel = "stylesheet" href="styles/style.css" type="text/css">
-        <link rel = "stylesheet" href="styles/modal.css" type="text/css">
-        <link rel="icon" href="favicon.png" type="image/x-icon">
-    </head>
-    <body>
-        <header>
-            <p><a href="#about"><img id ="logo" src="images/logo.png"></a></p>
-            <img id = "navpic" src="images/nav.png">
+<head>
+    <meta charset='utf-8'>
+    <title>Оконный сервис 46</title>
+    <link rel = "stylesheet" href="styles/style.css" type="text/css">
+    <link rel = "stylesheet" href="styles/modal.css" type="text/css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="sideNav">
+        <a href="#about"><img id="logo" src="images/logo.png"></a>
+        <a href="#about">О нас</a>
+        <a href="#services">Наши услуги</a>
+        <a href="#prices">Цены</a>
 
-            <nav id = "menu">
-                <ul align = "left">
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#services">Наши услуги</a></li>
-                    <li><a href="#prices">Цены</a></li>
-                    <li><a href="#contacts">Контакты</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div class="contacts"> <!--Контакты-->
+            <p>КОНТАКТЫ</p>
+            <p>wash.klimat@yandex.ru</p>
+            <p>+7-951-327-7412 </p>
+        </div>
+    </div>
+    <div class="mainContent">
 
         <img id ="mainpic" src="images/mainpic.jpg">
-        <br>
-        <br>
-        <br>
+
         <br id = "about">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p>О НАС</p>
-        <p>Ремонт окон в Курске и Курской области</p>
-        <p>За годы работы мы накопили опыт, который позволяет точно диагностировать вашу проблему и предложить проверенное решение.
 
-Широкий ассортимент материалов и профессионализм наших мастеров позволяют выполнять ремонтные работы любой сложности.</p>
+        <p align="center" class="title">О НАС</p>
+        <p align="center" class="subtitle">Ремонт окон в Курске и Курской области</p>
+        <p align="center" class="subtitle">За годы работы мы накопили опыт, который позволяет точно диагностировать вашу проблему и предложить проверенное решение. Широкий ассортимент материалов и профессионализм наших мастеров позволяют выполнять ремонтные работы любой сложности.</p>
 
-<!--Преимущества-->
-        <p>НАШИ ПРЕИМУЩЕСТВА</p>
+        <!--Преимущества-->
+        <p align="center" class="title">НАШИ ПРЕИМУЩЕСТВА</p>
 
         <div class="row">
             <div class="column">
                 <div class="card">
                     <img src = "images/сроки.png" class="icons">
                     <div class="card-content">
-                        <p>Cроки</p>
-                        <p>Быстро делаем. Четкие сроки — довольные клиенты!</p>
+                        <p class="title">Cроки</p>
+                        <p class="subtitle">Быстро делаем. Четкие сроки — довольные клиенты!</p>
                     </div>
                 </div>
             </div>
@@ -61,8 +48,8 @@
                 <div class="card">
                     <img src = "images/скидки.png" class="icons">
                     <div class="card-content">
-                        <p>Скидки</p>
-                        <p>Звоните — о цене всегда договоримся!</p>
+                        <p class="title">Скидки</p>
+                        <p class="subtitle">Звоните — о цене всегда договоримся!</p>
                     </div>
                 </div>
             </div>
@@ -71,8 +58,8 @@
                 <div class="card">
                     <img src = "images/качество.png" class="icons">
                     <div class="card-content">
-                        <p>Качественно</p>
-                        <p>Доступные цены — проверенное качество!</p>
+                        <p class="title">Качественно</p>
+                        <p class="subtitle">Доступные цены — проверенное качество!</p>
                     </div>
                 </div>
             </div>
@@ -80,30 +67,27 @@
                 <div class="card">
                     <img src = "images/гарантия.png" class="icons">
                     <div class="card-content">
-                        <p>Гарантия</p>
-                        <p>Даем гарантию на выполненную работу!</p>
+                        <p class="title">Гарантия</p>
+                        <p class="subtitle">Даем гарантию на выполненную работу!</p>
                     </div>
                 </div>
             </div>
         </div>
-<!--Преимущества END-->
+        <!--Преимущества END-->
 
-<button href="#" class="btnModal" onclick="showModal()">Открыть окно</button>
+        <div class="buttonPos">
+            <button href="#" class="btnModal" onclick="showModal()">Заказать услуги</button>
+        </div>
         <br id = "services">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p align="center">НАШИ УСЛУГИ</p>
-        <p align="center">Работаем с юридическими и физическими лицами за наличный и безналичный расчет</p>
+        <p align="center" class="title">НАШИ УСЛУГИ</p>
+        <p align="center" class="subtitle">Работаем с юридическими и физическими лицами за наличный и безналичный расчет</p>
         <div class="rowWork">
             <div class="columnWork">
                 <div class="card">
                     <div class="card-content">
-                        <h3>Ремонт и замена фурнитуры</h3>
+                        <p class="title">Ремонт и замена фурнитуры</h3>
                         <hr>
-                        <ul>
+                        <ul class="textWork">
                             <li><p>Разные внешние факторы и износ материалов могут стать причиной того, что работоспособная на первый взгляд конструкция пластикового окна ломается и требует замены.</p></li>
                             <li><p>Своевременная замена фурнитуры поможет продлить срок службы всей конструкции.</p></li>
                         </ul>
@@ -114,9 +98,9 @@
             <div class="columnWork">
                 <div class="card">
                     <div class="card-content">
-                        <h3>Замена стеклопакета</h3>
+                        <p class="title">Замена стеклопакета</p>
                         <hr>
-                        <ul>
+                        <ul class="textWork">
                             <li><p>Разгерметизация окна</p></li>
                             <li><p>Замена разбитого стекла</p></li>
                             <li><p>Замена стеклопакетов в окнах при наличии трещин и видимых сколов</p></li>
@@ -133,9 +117,9 @@
             <div class="columnWork">
                 <div class="card">
                     <div class="card-content">
-                        <h3>Регулировка створок</h3>
+                        <p class="title">Регулировка створок</p>
                         <hr>
-                        <ul>
+                        <ul class="textWork">
                             <li><p>Одной из часто возникающих проблем является затрудненное закрытие окна из-за провисания  створки. При качественной перерасклиновке стеклопакета добиваемся правильной геометрии створки в окне</p></li>
                         </ul>
                     </div>
@@ -145,10 +129,10 @@
             <div class="columnWork">
                 <div class="card">
                     <div class="card-content">
-                        <h3>Замена уплотнительных резинок</h3>
+                        <p class="title">Замена уплотнительных резинок</h3>
                         <hr>
-                        <ul>
-                            <li>Наши мастера заменят уплотнительную резину на Ваших окнах качественно и быстро. Поменять резиновые уплотнители в окнах можно в течении одного дня.</li>
+                        <ul class="textWork">
+                            <li><p>Наши мастера заменят уплотнительную резину на Ваших окнах качественно и быстро. Поменять резиновые уплотнители в окнах можно в течении одного дня.</p></li>
                         </ul>
                     </div>
                 </div>
@@ -158,9 +142,9 @@
             <div class="columnWork">
                 <div class="card">
                     <div class="card-content">
-                        <h3>Изготовление и монтаж окон, балконов, лоджий</h3>
+                        <p class="title">Изготовление и монтаж окон, балконов, лоджий</p>
                         <hr>
-                        <ul>
+                        <ul class="textWork">
                             <li><p>Большой выбор пластиковых окон из надежных профилей</p></li>
                             <li><p>Все виды стеклопакетов</p></li>
                             <li><p>Качественная фурнитура и аксессуары</p></li>
@@ -173,9 +157,9 @@
             <div class="columnWork">
                 <div class="card">
                     <div class="card-content">
-                        <h3>Прочие услуги</h3>
+                        <p class="title">Прочие услуги</p>
                         <hr>
-                        <ul>
+                        <ul class="textWork">
                             <li><p>Откосы из сендвич панелей</p></li>
                             <li><p>Москитные сетки</p></li>
                             <li><p>Детские замки</p></li>
@@ -186,17 +170,7 @@
             </div>
         </div>
         <br id = "prices">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <table border="1px">
-            <tr>
-                <th>Наименование</th>
-                <th>Цена</th>
-            </tr>
+        <table class="subtitle">
             <tr>
                 <td>Замена уплотнителя</td>
                 <td>От 150 руб/п.м.</td>
@@ -271,10 +245,9 @@
             </tr>
         </table>
         <br><br>
-
-
-
-<button href="#" class="btnModal" onclick="showModal()">Открыть окно</button>
+        <div class="buttonPos">
+            <button href="#" class="btnModal" onclick="showModal()">Заказать услуги</button>
+        </div>
 
         <!--Скрытое модальное окно-->
         <div id="modalWindow">
@@ -290,30 +263,19 @@
         </div>
         <div class="overlay" id="js-overlay-modal" onclick="closeModal()"></div><!--Затемнение-->
         <!--Конец модального окна-->
+    </div>
+    <!--Скрипты-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--Подключение jQuery-->
 
-        <!--Скрипты-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!--Подключение jQuery-->
+    <script src="js/jquery.maskedinput.min.js"></script> <!--Маска телефонного номера-->
+    <script>
+    $(document).ready(function() {
+        $("#phone").mask("+7 (999) 999-99-99");
+    });
+    </script>
 
-        <script src="js/jquery.maskedinput.min.js"></script> <!--Маска телефонного номера-->
-        <script>
-            $(document).ready(function() {
-                $("#phone").mask("+7 (999) 999-99-99");
-            });
-        </script>
-
-        <script src="js/modal.js"></script><!--Скрипт для модального окна-->
-        <script src="js/checkClient.js"></script><!--Скрипт проверки телефона-->
-    </body>
-    <footer>
-        <br id = "contacts">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p>КОНТАКТЫ</p>
-        <p>wash.klimat@yandex.ru +7-951-327-7412 </p>
-    </footer>
+    <script src="js/modal.js"></script><!--Скрипт для модального окна-->
+    <script src="js/checkClient.js"></script><!--Скрипт проверки телефона-->
+</body>
 
 </html>

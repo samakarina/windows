@@ -1,61 +1,112 @@
 @charset "utf-8";
-#logo {
-    position: fixed;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri;
+}
+hr {
+    background-color: white;
+    border: 0;
+    height: 3px;
+    width: 90%;
+}
+/*Стили бокового меню*/
+.sideNav {
+    height: 100%;
     width: 15%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+#logo {
+    width: 100%;
     left: 38px;
     z-index: 1;
 }
+
+.sideNav a {
+    color: #818181;
+    display: block;
+    font-size: 25px;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+}
+
+.sideNav a:hover {
+    color: #f1f1f1;
+}
+
+.contacts {
+    position: absolute;
+    bottom: 3%;
+    color: #f1f1f1;
+    text-align: center;
+    left: 15%;
+    right: 15%;
+}
+/*Стили основного контента*/
+.mainContent {
+    margin-left: 15%;
+    padding: 0 10px;
+}
+
+.title {
+    font-size: 36px;
+    font-family: Calibri;
+    font-style: normal;
+    line-height: 44px;
+    color: black;
+    font-weight: bold;
+}
+
+.columnWork .title {
+    font-weight: normal;
+}
+
+.subtitle {
+    font-size: 36px;
+    font-family: Calibri;
+    font-style: normal;
+    line-height: 44px;
+    color: #3A558E;
+}
+
+.textWork p{
+    font-size: 24px;
+    font-family: Calibri;
+    font-style: normal;
+    line-height: 29px;
+    color: #3A558E;
+}
+
 #mainpic {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 75%;
-}
-#navpic {
-    position: fixed;
-    left: 0;
-    z-index: 0;
-    top: 0;
-
-}
-#menu{
-    position: fixed;
-    left: 0px;
-    top: 100px
-}
-#menu nav{
-    width: 960px;
     margin: 0 auto;
+    width: 90%;
 }
-#menu nav:before {
 
-    content: '';
-    display: block;
-    height: 50 px;
-    width: 100%;
-    background: #000;
-    position: fixed;
-    left: 0;
-    z-index: -1;
+/*Стили кнопки*/
+.buttonPos {
+    margin: 20px 0 75px 0;
+}
 
-}
-#menu ul{
-    margin: 0;
-
-}
-#menu ul li{
-    list-style: none;
-    margin-bottom: 30%;
-}
-#menu ul li a{
-
-    text-decoration: none;
-    color: #3A558E;
-    padding: 0px;
-    font-size:20px;
-}
-#menu ul li a:hover{
-    color: #88909B
+.btnModal {
+    height: 82px;
+    width: 367px;
+    display:block;
+    position: relative;
+    border: 1px solid white;
+    border-radius: 50px;
+    margin:0 auto;
+    background: #3a558e;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
 }
 /*Стили перечисления преимуществ*/
 .icons{
@@ -69,7 +120,7 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: nowrap;
-  margin: 20px;
+  margin: 75px 20px 75px 20px;
 }
 .column {
   display: flex;
@@ -88,9 +139,9 @@
 
 .columnWork {
     display: flex;
-    width: 30%;
     padding: 5px;
-    border: 1px solid black;
+    width: 25%;
+    background: #D5E1F3;
 }
 
 .columnWork ul {
@@ -99,23 +150,24 @@
 }
 
 .rowWork .columnWork:first-child {
-    margin: 0 4% 0 0;
+    margin: 0 8% 0 0;
 }
 
 .columnWork .card-content, .columnWork .card {
-    padding: 0;
     margin: 0 auto;
+    padding: 0;
 }
 
 /*Стили таблицы цены*/
-
 table {
     border-collapse: collapse;
-    border: 1px black solid;
     margin: auto;
-    width: 35%;
+    width: 65%;
+    border: 3px solid #ffffff;
 }
 
-table tr td {
+table tr td,th {
     text-align: center;
+    width: 50%;
+    border: 2px #c2c6cb solid;
 }
