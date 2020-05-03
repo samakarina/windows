@@ -48,10 +48,11 @@ hr {
 .contacts {
 	position: absolute;
 	bottom: 3%;
-	color: #f1f1f1;
 	text-align: center;
 	left: 15%;
 	right: 15%;
+	color: #818181;
+	font-size: 25px;
 }
 
 
@@ -176,7 +177,8 @@ hr {
 .columnWork {
 	display: flex;
 	padding: 5px;
-	width: 25%;
+	width: 28vw;
+	height: 28vw;
 	background: #D5E1F3;
 }
 
@@ -210,4 +212,17 @@ th {
 	text-align: center;
 	width: 50%;
 	border: 2px #c2c6cb solid;
+}
+
+.price {
+	margin: auto;
+	width: 20%;
+}
+.price a {
+	text-decoration: none;
+	color: #3a558e;
+}
+.price a:hover {
+	color: #3a558e;
+	text-decoration: underline;
 }
